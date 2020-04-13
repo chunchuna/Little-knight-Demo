@@ -1,0 +1,36 @@
+{
+	"name": "Egame",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "E英雄"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "E英雄攻击遮罩"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Eemy"
+		},
+		{
+			"functionName": "restart",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 823282105405631
+				}
+			],
+			"sid": 298826319684512
+		}
+	],
+	"sid": 355833651874337
+}

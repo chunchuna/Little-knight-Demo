@@ -1,0 +1,54 @@
+{
+	"name": "E英雄攻击遮罩",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 601900188544338,
+					"parameters": {
+						"interval-seconds": "1"
+					}
+				},
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 784365001556459,
+					"parameters": {
+						"object": "HeroAtackShape"
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "lifetime(runtime)"
+				}
+			],
+			"sid": 214943782172765
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "HeroAtackShape",
+					"sid": 532813697139809,
+					"parameters": {
+						"object": "emy"
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "heroActTouchEmy(runtime)"
+				}
+			],
+			"sid": 870869907139490
+		}
+	],
+	"sid": 592943102286185
+}

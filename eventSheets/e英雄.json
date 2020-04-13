@@ -1,0 +1,196 @@
+{
+	"name": "E英雄",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 666203449135581
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "iniHero(runtime)\n"
+				},
+				{
+					"id": "init",
+					"objectClass": "ProUI",
+					"sid": 681739761308682
+				}
+			],
+			"sid": 217966035488063
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-load-complete",
+					"objectClass": "System",
+					"sid": 699814552116888
+				}
+			],
+			"actions": [
+				{
+					"id": "init",
+					"objectClass": "ProUI",
+					"sid": 455437493825531
+				}
+			],
+			"sid": 430062394543049
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 714562397559570
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "console.log(\"ck\")\nSetHeroMove(runtime)\nHeroAnimation(runtime)\nSetHeroState(runtime)\nMirrHero(runtime)\nHeroAtack(runtime)\nHpbarChangeColor(runtime)\n角色死亡(runtime)\nreStartGame(runtime)\nsetHptext(runtime);\n"
+				},
+				{
+					"id": "setvalue0",
+					"objectClass": "heroHp",
+					"sid": 620001395609395,
+					"behaviorType": "Progress",
+					"parameters": {
+						"value0": "hero.hp",
+						"animation": "linear"
+					}
+				},
+				{
+					"id": "setMaxValue",
+					"objectClass": "heroHp",
+					"sid": 639894841770644,
+					"behaviorType": "Progress",
+					"parameters": {
+						"max": "hero.maxhp"
+					}
+				}
+			],
+			"sid": 850523464932265
+		},
+		{
+			"functionName": "shake",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "shake",
+					"objectClass": "hero",
+					"sid": 214504601622194,
+					"behaviorType": "ScrollTo",
+					"parameters": {
+						"magnitude": "5",
+						"duration": "0.32",
+						"mode": "reducing-magnitude"
+					}
+				}
+			],
+			"sid": 448841700861922
+		},
+		{
+			"functionName": "Flip",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "size",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 317722814626417
+				},
+				{
+					"name": "uid",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 101023018127623
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [
+				{
+					"id": "pick-by-unique-id",
+					"objectClass": "actoer",
+					"sid": 571454777705275,
+					"parameters": {
+						"unique-id": "uid"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 611336464854176,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 116338757673851,
+							"parameters": {
+								"variable": "size",
+								"comparison": 0,
+								"value": "-1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "actoer",
+							"sid": 483203357521769,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 548439438668272
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 147906735378577,
+							"parameters": {
+								"variable": "size",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "actoer",
+							"sid": 800743739899099,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 118820880264913
+				}
+			]
+		}
+	],
+	"sid": 620795520100423
+}

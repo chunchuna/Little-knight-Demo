@@ -1,0 +1,344 @@
+{
+	"name": "Eemy",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 536662149576251
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "敌人状态初始化(runtime)"
+				}
+			],
+			"sid": 615827986971127
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "emy",
+					"sid": 665590474029990
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "敌人状态初始化(runtime)"
+				}
+			],
+			"sid": 127571289623802
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 506903269275925
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-imagepoint",
+					"objectClass": "emyHpText",
+					"sid": 377680327633522,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "emy",
+						"image-point": "1",
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"type": "script",
+					"script": "更新状态(runtime)\ndebug(runtime)"
+				}
+			],
+			"sid": 680469875946151
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 720011003956872,
+					"parameters": {
+						"object": "emy"
+					}
+				},
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 218659370081494
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "敌人移动(runtime)"
+				}
+			],
+			"sid": 995021546053797
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 197709099460380,
+					"parameters": {
+						"interval-seconds": "0.5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "敌人攻击(runtime)"
+				}
+			],
+			"sid": 326471784562283
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "emyBullet",
+					"sid": 450050748080088,
+					"parameters": {
+						"object": "hero"
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "子弹碰撞到角色(runtime)"
+				}
+			],
+			"sid": 617214800000380
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "dmgText",
+					"sid": 164393100663512
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-position",
+					"objectClass": "dmgText",
+					"sid": 914931728209089,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"x": "Self.x",
+						"y": "Self.Y-30",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 419180748827399
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 506991735634998,
+					"parameters": {
+						"interval-seconds": "3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "emyCreat(runtime)"
+				}
+			],
+			"sid": 136309879617201
+		},
+		{
+			"eventType": "comment",
+			"text": "emy fun"
+		},
+		{
+			"functionName": "moveTo",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "uid",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 118441362232435
+				},
+				{
+					"name": "spd",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 880441711043809
+				},
+				{
+					"name": "movex",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 428570133172627
+				},
+				{
+					"name": "movey",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 864654906881792
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [
+				{
+					"id": "pick-by-unique-id",
+					"objectClass": "emy",
+					"sid": 896274167413917,
+					"parameters": {
+						"unique-id": "uid"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-speed",
+					"objectClass": "emy",
+					"sid": 507075497781513,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"speed": "spd"
+					}
+				},
+				{
+					"id": "move-to-position",
+					"objectClass": "emy",
+					"sid": 404499955965667,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"x": "movex",
+						"y": "movey",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 577253649663249
+		},
+		{
+			"functionName": "moveTostop",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "uid",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 136580776709307
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [
+				{
+					"id": "pick-by-unique-id",
+					"objectClass": "emy",
+					"sid": 144213457109735,
+					"parameters": {
+						"unique-id": "uid"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "emy",
+					"sid": 865389815520521,
+					"behaviorType": "MoveTo"
+				}
+			],
+			"sid": 508775720317658
+		},
+		{
+			"functionName": "子弹",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "uid",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 597568072362505
+				},
+				{
+					"name": "s_x",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 881293985263022
+				},
+				{
+					"name": "s_y",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 830140634373303
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [
+				{
+					"id": "pick-by-unique-id",
+					"objectClass": "emyBullet",
+					"sid": 587546682544343,
+					"parameters": {
+						"unique-id": "uid"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "emyBullet",
+					"sid": 286241316299418,
+					"parameters": {
+						"x": "s_x",
+						"y": "s_y"
+					}
+				}
+			],
+			"sid": 277087630379484
+		}
+	],
+	"sid": 676982907544789
+}

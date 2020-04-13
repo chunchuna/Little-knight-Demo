@@ -1,0 +1,145 @@
+{
+	"name": "startpage",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 200917033432362
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "开始界面初始化(runtime)"
+				}
+			],
+			"sid": 929467370818238
+		},
+		{
+			"eventType": "script",
+			"script": "KeyListener(runtime)"
+		},
+		{
+			"functionName": "tweenUIbar",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "posx",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 176405300850153
+				},
+				{
+					"name": "posy",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 820955075491779
+				},
+				{
+					"name": "tween_time",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 108914553995851
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "tween-two-properties",
+					"objectClass": "UIbar",
+					"sid": 287206620526629,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"pos\"",
+						"property": "position",
+						"end-x": "posx",
+						"end-y": "posy",
+						"time": "tween_time",
+						"ease": "easeoutsine",
+						"destroy-on-complete": "no"
+					}
+				}
+			],
+			"sid": 581129389169008
+		},
+		{
+			"functionName": "jumpSence",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "sence",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 445128188012047
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 193995809908818,
+					"parameters": {
+						"layout": "sence"
+					}
+				}
+			],
+			"sid": 832211440357846
+		},
+		{
+			"functionName": "TweenIsdown",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "number",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "tweenname",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 566177685121621
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [
+				{
+					"id": "is-playing",
+					"objectClass": "UIbar",
+					"sid": 450443940811318,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "tweenname"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-function-return-value",
+					"objectClass": "Functions",
+					"sid": 227811311238431,
+					"parameters": {
+						"value": "1"
+					}
+				}
+			],
+			"sid": 404673635070484
+		}
+	],
+	"sid": 358755773791750
+}
