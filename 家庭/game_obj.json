@@ -1,0 +1,14 @@
+{
+	"name": "game_obj",
+	"plugin-id": "Sprite",
+	"sid": 714884666570163,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"emyBullet",
+		"emy1",
+		"hero",
+		"HeroAtackShape"
+	]
+}

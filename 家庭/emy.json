@@ -1,0 +1,57 @@
+{
+	"name": "emy",
+	"plugin-id": "Sprite",
+	"sid": 106687782687385,
+	"instanceVariables": [
+		{
+			"name": "hp",
+			"type": "number",
+			"desc": "",
+			"sid": 212964291930333
+		},
+		{
+			"name": "spd",
+			"type": "number",
+			"desc": "",
+			"sid": 998278929771206
+		},
+		{
+			"name": "state",
+			"type": "string",
+			"desc": "",
+			"sid": 548343055871160
+		},
+		{
+			"name": "dis",
+			"type": "number",
+			"desc": "",
+			"sid": 485820439112126
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 981793946070653
+		},
+		{
+			"behaviorId": "EightDir",
+			"name": "move",
+			"sid": 670021359654684
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 316939858627166
+		}
+	],
+	"effectTypes": [
+		{
+			"effectId": "gamma",
+			"name": "Gamma"
+		}
+	],
+	"members": [
+		"emy1"
+	]
+}

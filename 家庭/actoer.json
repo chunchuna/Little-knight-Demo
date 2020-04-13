@@ -1,0 +1,11 @@
+{
+	"name": "actoer",
+	"plugin-id": "Sprite",
+	"sid": 886967310714224,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"hero"
+	]
+}
