@@ -1,0 +1,396 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 19400,
+	"name": "slash",
+	"runtime": "c3",
+	"useWorker": true,
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r194",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"version": "r194",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r194",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "aekiro_proui",
+			"name": "ProUI",
+			"author": "Aekiro",
+			"version": "1.4",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "EightDir",
+			"name": "8 Direction",
+			"author": "Scirra",
+			"version": "r194",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"version": "r194",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"version": "r194",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Rotate",
+			"name": "Rotate",
+			"author": "Scirra",
+			"version": "r194",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"version": "r194",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
+			"author": "Scirra",
+			"version": "r194",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"version": "r194",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "aekiro_progress",
+			"name": "Progress",
+			"author": "Aekiro",
+			"version": "1.4",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "aekiro_gameobject",
+			"name": "Game Object",
+			"author": "Aekiro",
+			"version": "1.4",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"version": "r194",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"version": "r194",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "gamma",
+			"name": "Gamma",
+			"author": "Scirra",
+			"version": "r194",
+			"bundled": false
+		}
+	],
+	"uniqueId": "wft4pwx4vz0",
+	"objectTypes": {
+		"items": [
+			"hero",
+			"Keyboard",
+			"HeroAtackShape",
+			"emy1",
+			"emyHpText",
+			"emyBullet",
+			"debug_text",
+			"dmgText",
+			"ProUI",
+			"heroHp",
+			"gameoverText",
+			"hptext",
+			"Sprite",
+			"UIbar"
+		],
+		"subfolders": []
+	},
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [
+			"actoer",
+			"emy",
+			"game_obj"
+		],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"startpage",
+			"game1"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"Egame",
+			"startpage"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"E英雄",
+					"E英雄攻击遮罩"
+				],
+				"subfolders": [],
+				"name": "hero"
+			},
+			{
+				"items": [
+					"Eemy"
+				],
+				"subfolders": [],
+				"name": "EMY"
+			}
+		]
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [
+				{
+					"name": "mainGame.js",
+					"type": "application/javascript",
+					"sid": 782277616650869
+				},
+				{
+					"name": "异步.js",
+					"type": "application/javascript",
+					"sid": 901579498936249
+				},
+				{
+					"name": "math.js",
+					"type": "application/javascript",
+					"sid": 559894405067652
+				}
+			],
+			"subfolders": [
+				{
+					"items": [
+						{
+							"name": "hero.js",
+							"type": "application/javascript",
+							"sid": 374022145648167
+						},
+						{
+							"name": "heroACT.js",
+							"type": "application/javascript",
+							"sid": 827462332643245
+						},
+						{
+							"name": "HeroHpBAR.js",
+							"type": "application/javascript",
+							"sid": 244204682507079
+						}
+					],
+					"subfolders": [],
+					"name": "hero"
+				},
+				{
+					"items": [
+						{
+							"name": "emy.js",
+							"type": "application/javascript",
+							"sid": 671342337565842
+						},
+						{
+							"name": "emyMove.js",
+							"type": "application/javascript",
+							"sid": 269567599678615
+						},
+						{
+							"name": "emybulet.js",
+							"type": "application/javascript",
+							"sid": 115990311606249
+						},
+						{
+							"name": "emyCreat.js",
+							"type": "application/javascript",
+							"sid": 275394712437971
+						}
+					],
+					"subfolders": [],
+					"name": "emy"
+				},
+				{
+					"items": [
+						{
+							"name": "startpage.js",
+							"type": "application/javascript",
+							"sid": 400185102615277
+						}
+					],
+					"subfolders": [],
+					"name": "startpage"
+				}
+			]
+		},
+		"sound": {
+			"items": [],
+			"subfolders": []
+		},
+		"music": {
+			"items": [],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 191167107805954
+				},
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 702028259362305
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 550659589113869
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 218392175870118
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 365811191733975
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 253759134117119
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 432857129097255
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0.0",
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": true,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-integer-scale",
+		"fullscreenQuality": "low",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useHighDpi": true,
+		"orientations": "landscape",
+		"enableWebGL": true,
+		"gpuPreference": "high-performance",
+		"framerateMode": "vsync",
+		"compositingMode": "standard",
+		"sampling": "nearest",
+		"downscaling": "medium",
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"clearBackground": true,
+		"enhancedAccelerationPrecision": true
+	},
+	"viewportWidth": 854,
+	"viewportHeight": 480,
+	"firstLayout": null
+}
